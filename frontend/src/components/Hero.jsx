@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 import { assets } from '../assets/assets';
 
 const Hero = () => {
+    const scrollToCollections = () => {
+        const section = document.getElementById('latest-collections');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className='flex flex-col sm:flex-row border border-gray-400 overflow-hidden'>
 
@@ -36,13 +43,14 @@ const Hero = () => {
                         Latest Arrivals
                     </motion.h1>
 
-                    <motion.div 
+                    <motion.button 
                         whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} 
                         className='flex items-center gap-2 cursor-pointer'
+                        onClick={scrollToCollections}
                     >
                         <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>
                         <p className='w-8 md:w-11 h-[1px] bg-[#414141]'></p>
-                    </motion.div>
+                    </motion.button>
                 </div>
             </motion.div>
 

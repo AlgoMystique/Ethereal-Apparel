@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import React, { useContext, useEffect, useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Title from './Title';
 import { ShopContext } from '../context/ShopContext';
 import ProductItem from './ProductItem';
@@ -8,7 +7,7 @@ import ProductItem from './ProductItem';
 const LatestCollection = () => {
     const { products } = useContext(ShopContext);
     const [latestProducts, setLatestProducts] = useState([]);
-    const ref = React.useRef(null);
+    const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     useEffect(() => {
@@ -18,7 +17,7 @@ const LatestCollection = () => {
     }, [products]);
 
     return (
-        <div ref={ref} className='my-10'>
+        <div ref={ref} id="latest-collections" className='my-10'>
             {/* Title Section */}
             <motion.div 
                 initial={{ opacity: 0, y: 50 }} 
@@ -39,11 +38,11 @@ const LatestCollection = () => {
                 initial={{ opacity: 0, scale: 0.95 }} 
                 animate={isInView ? { opacity: 1, scale: 1 } : {}} 
                 transition={{ duration: 0.6, delay: 0.3 }} 
-                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'
+                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-8 px-4'
             >
                 {latestProducts.map((item, index) => (
                     <motion.div 
-                        key={index}
+                        key={item._id} 
                         initial={{ opacity: 0, y: 30 }} 
                         animate={isInView ? { opacity: 1, y: 0 } : {}} 
                         transition={{ duration: 0.4, delay: index * 0.1 }} 
