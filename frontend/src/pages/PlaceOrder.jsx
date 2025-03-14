@@ -1,14 +1,17 @@
-import React, { useContext, useState } from 'react'
-import Title from '../components/Title'
-import CartTotal from '../components/CartTotal'
-import { assets } from '../assets/assets'
-import { ShopContext } from '../context/ShopContext'
-import axios from 'axios'
-import { toast } from 'react-toastify'
+import React, { useContext, useState } from 'react';
+import Title from '../components/Title';
+import CartTotal from '../components/CartTotal';
+import { assets } from '../assets/assets';
+import { ShopContext } from '../context/ShopContext';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const PlaceOrder = () => {
     const [method, setMethod] = useState('stripe'); // Default to Stripe
-    const { navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products } = useContext(ShopContext);
+    const { backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products } = useContext(ShopContext);
+    const navigate = useNavigate();
+    
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -23,7 +26,7 @@ const PlaceOrder = () => {
 
     const onChangeHandler = (event) => {
         const { name, value } = event.target;
-        setFormData(data => ({ ...data, [name]: value }));
+        setFormData((data) => ({ ...data, [name]: value }));
     };
 
     const onSubmitHandler = async (event) => {
@@ -60,19 +63,22 @@ const PlaceOrder = () => {
             }
 
             if (response?.data?.success) {
-                window.location.replace(response.data.session_url);
+                toast.success('Order placed successfully!');
+                setCartItems({}); // Clear cart
+                navigate('/orders'); // Redirect to Orders page
             } else {
-                toast.error(response?.data?.message || "Payment failed.");
+                console.error("Order Error:", response?.data);
+                toast.error(response?.data?.message || "Payment failed. Please try again.");
             }
         } catch (error) {
-            console.error(error);
-            toast.error(error.message);
+            console.error("Order submission error:", error);
+            toast.error(error.response?.data?.message || "Something went wrong.");
         }
     };
 
     return (
         <form onSubmit={onSubmitHandler} className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
-            {/* ------------- Left Side (Delivery Information) ---------------- */}
+            {/* Delivery Information */}
             <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
                 <div className='text-xl sm:text-2xl my-3'>
                     <Title text1={'DELIVERY'} text2={'INFORMATION'} />
@@ -94,7 +100,7 @@ const PlaceOrder = () => {
                 <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' />
             </div>
 
-            {/* ------------- Right Side (Payment and Order Summary) ------------------ */}
+            {/* Payment & Order Summary */}
             <div className='mt-8'>
                 <div className='mt-8 min-w-80'>
                     <CartTotal />
