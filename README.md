@@ -45,7 +45,7 @@ This interactive and responsive e-commerce platform provides users with a seamle
 ## Live Demo:
 [Click here to view the live project](https://ecommerce-website-frontend-fnfh.onrender.com)
 
-## Backend deployment: 
+## Admin Panel deployment: 
 
 [Click here to view ](https://ecommerce-website-backend-2sgz.onrender.com)
 
