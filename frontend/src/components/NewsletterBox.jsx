@@ -1,24 +1,65 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
 
 const NewsletterBox = () => {
+    return (
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.2 }} 
+            className='text-center'
+        >
+            {/* Title */}
+            <motion.p 
+                initial={{ opacity: 0, y: 30 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className='text-2xl font-medium text-gray-800'
+            >
+                Follow Us for Exclusive Deals & Early Access!
+            </motion.p>
 
-    const onSubmitHandler = (event) => {
-        event.preventDefault ();
-    }
-    
-  return (
-    <div className='text-center'>
+            {/* Social Media Links */}
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className='flex justify-center gap-6 mt-6'
+            >
+                <motion.a 
+                    href="https://instagram.com/mybrand" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                >
+                    <FaInstagram className="text-3xl text-pink-500" />
+                </motion.a>
 
-      <p className='text-2xl font-medium text-gray-800'>Get 20% Off – Subscribe Now!</p>
- 
+                <motion.a 
+                    href="https://tiktok.com/@mybrand" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: -5 }}
+                >
+                    <FaTiktok className="text-3xl text-black" />
+                </motion.a>
 
-      <form onSubmit ={onSubmitHandler} className='w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3'>
-        <input className='w-full sm:flex-1 outline-none' type="email" placeholder='Enter your email id' required />
-        <button className='bg-black text-white text-xs px-10 py-4' type='submit'>SUBSCRIBE</button>
-      </form>
+                <motion.a 
+                    href="https://facebook.com/mybrand" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                >
+                    <FaFacebook className="text-3xl text-blue-600" />
+                </motion.a>
+            </motion.div>
 
-    </div>
-  )
-}
+            <p className="text-sm text-gray-600 mt-3">
+                Get early access to sales, new arrivals, and exclusive discounts!
+            </p>
+        </motion.div>
+    );
+};
 
-export default NewsletterBox
+export default NewsletterBox;
