@@ -93,7 +93,9 @@ _The Contact Page offers users a way to reach out for any inquiries or support._
 
 ### 10. **Admin Panel**  
 Admin users can log in to manage products, categories, and track orders.  
-
+![ethereal](screenshots/13.png)  
+![ethereal](screenshots/14.png)  
+![ethereal](screenshots/15.png)  
 _The admin panel provides a powerful interface for managing products and monitoring orders._
 
 ---
