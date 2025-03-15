@@ -76,7 +76,22 @@ The login and registration screens allow users to create accounts or log in to a
 ![ethereal](screenshots/6.png)  
 _Users can register or log in to access their account and view their order history._
 
-### 7. **Admin Panel**  
+### 7. **Orders Page**  
+After a successful payment, users are redirected to their **Orders Page** where they can view past orders, track their status, and see the details of their previous purchases.  
+![ethereal](screenshots/9.png)  
+_The Orders Page lets users easily track their order history and status._
+
+### 8. **About Us Page**  
+Learn about the brand’s mission, vision, and values on the **About Us** page.  
+![ethereal](screenshots/10.png)  
+_The About Us page provides information about the brand, giving users a sense of who they are shopping with._
+
+### 9. **Contact Page**  
+Users can find contact information to get in touch with support or the team behind Ethereal Apparel.  
+![ethereal](screenshots/11.png)  
+_The Contact Page offers users a way to reach out for any inquiries or support._
+
+### 10. **Admin Panel**  
 Admin users can log in to manage products, categories, and track orders.  
 
 _The admin panel provides a powerful interface for managing products and monitoring orders._
