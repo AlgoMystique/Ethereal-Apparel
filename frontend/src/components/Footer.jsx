@@ -66,7 +66,7 @@ const Footer = () => {
       <motion.div variants={itemVariants}>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright 2024@Ethereal.com - All Rights Reserved.
+          Copyright 2024@Ethereal.com - All Rights Reserved. Made with ❤️ by Sababa
         </p>
       </motion.div>
     </motion.div>
