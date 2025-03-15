@@ -2,7 +2,7 @@
 
 Ethereal Apparel is a modern and scalable e-commerce website built using the MERN stack (MongoDB, Express.js, React, and Node.js). This project showcases a full-stack single-page application (SPA) with a focus on user interaction, smooth UX, and real-time data handling.
 
-![ethereal](screenshot/1.png)
+![ethereal](screenshots/1.png)
 
 
 ## Technologies Used:
@@ -43,21 +43,27 @@ This interactive and responsive e-commerce platform provides users with a seamle
 -**Deployment:** Hosted on Render, ensuring high availability and scalability for all users.
 
 ## Live Demo:
-[Click here to view the live project](https://ecommerce-website-frontend-fnfh.onrender.com)
+
+[Click here to view the live project](https://ethereal-frontend-theta.vercel.app)
+
+## Backend Deployment: 
+
+[Click here to view ](https://ethereal-backend.vercel.app)
 
 ## Admin Panel deployment: 
 
-[Click here to view ](https://ecommerce-website-backend-2sgz.onrender.com)
-
+[Click here to view ](https://ethereal-admin.vercel.app)
 
 ## Screenshots:
 
-![ethereal](screenshot/2.png)
-![ethereal](screenshot/3.png)
-![ethereal](screenshot/4.png)
-![ethereal](screenshot/5.png)
-![ethereal](screenshot/6.png)
-![ethereal](screenshot/7.png)
+![ethereal](screenshots/2.png)
+![ethereal](screenshots/3.png)
+![ethereal](screenshots/4.png)
+![ethereal](screenshots/5.png)
+![ethereal](screenshots/6.png)
+![ethereal](screenshots/7.png)
+![ethereal](screenshots/8.png)
+![ethereal](screenshots/9.png)
 
 ## Project Structure:
 
