@@ -1,82 +1,137 @@
 # Ethereal Apparel - E-Commerce Website
 
-Ethereal Apparel is a modern and scalable e-commerce website built using the MERN stack (MongoDB, Express.js, React, and Node.js). This project showcases a full-stack single-page application (SPA) with a focus on user interaction, smooth UX, and real-time data handling.
+**Ethereal Apparel** is a modern and scalable e-commerce website built with the **MERN stack** (MongoDB, Express.js, React, and Node.js). This project is a full-stack single-page application (SPA) designed to deliver a seamless user experience with real-time data handling and smooth navigation.
 
-![ethereal](screenshot/1.png)
-
+![ethereal](screenshots/1.png)  
+_An overview of the Ethereal Apparel homepage_
 
 ## Technologies Used:
 
--**Frontend:** React.js
-
--**Backend:** Node.js, Express.js
-
--**Database:** MongoDB with Mongoose ODM
-
--**Authentication:** JWT (JSON Web Tokens)
-
--**Deployment:** Render for full-stack deployment
-
--**Version Control:** GitHub for source code management
-
--**CI/CD:** itHub Actions for automated workflows
-
+- **Frontend:** React.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose ODM
+- **Authentication:** JWT (JSON Web Tokens)
+- **Deployment:** Render for full-stack deployment
+- **Version Control:** GitHub for source code management
+- **CI/CD:** GitHub Actions for automated workflows
 
 ## Project Overview:
 
-This interactive and responsive e-commerce platform provides users with a seamless shopping experience. It offers authentication, a dynamic product catalog, a shopping cart, and a seemless payment and checkout process by stripe. All powered by a MongoDB backend. The website is fully deployed and functional, supporting various user operations like browsing, adding products to the cart, and managing user authentication securely with JWT.
+**Ethereal Apparel** offers an interactive, user-friendly platform for customers to shop for trendy apparel. With a focus on user interaction, it features a dynamic product catalog, user authentication, a shopping cart, and secure payment through Stripe. All data is stored and managed in a MongoDB backend, ensuring real-time updates across the platform. Fully deployed and functional, the website supports browsing, adding products to the cart, user authentication, and checkout.
+
+---
 
 ## Key Features:
 
--**Interactive UI:** Engaging and user-friendly interface that allows users to browse products, add them to the cart, and manage their profile.
+- **Interactive UI:** A sleek and modern design that makes browsing products and managing the shopping cart easy and enjoyable.
+- **User Authentication:** Secure sign-up and login using JWT authentication for a personalized shopping experience.
+- **Product Management:** Real-time updates of product availability, pricing, and descriptions fetched from the MongoDB database.
+- **Shopping Cart:** Add/remove items to/from the cart with instant updates and smooth transitions.
+- **Responsive Design:** Fully optimized for various devices using **Tailwind CSS**.
+- **Image Hosting with Cloudinary:** Fast and reliable product image hosting via Cloudinary.
+- **Deployment:** Hosted on **Render** to ensure scalability and availability.
 
--**User Authentication:** Users can register and log in with secure JWT authentication to personalize their shopping experience.
-
--**Product Management:** View and filter products whilst fetching real-time data from the MongoDB database.
-
--**Shopping Cart:** Users can add and remove products to/from their cart with instant updates.
-
--**Responsive Design:** Optimized for various screen sizes using Tailwind CSS, offering a mobile-first, responsive layout.
-
--**Image Hosting with Cloudinary:** Product images are uploaded and served via Cloudinary, providing fast and responsive image delivery.
-
--**Deployment:** Hosted on Render, ensuring high availability and scalability for all users.
+---
 
 ## Live Demo:
-[Click here to view the live project](https://ecommerce-website-frontend-fnfh.onrender.com)
 
-## Admin Panel deployment: 
+- **[Live Frontend Demo](https://ethereal-frontend-theta.vercel.app)** – Explore the full shopping experience.
+- **[Backend Demo](https://ethereal-backend.vercel.app)** – View the server-side API in action.
+- **[Admin Panel Demo](https://ethereal-admin.vercel.app)** – Access the admin dashboard to manage products and orders.
 
-[Click here to view ](https://ecommerce-website-backend-2sgz.onrender.com)
+---
 
+## A Tour of the Site with Screenshots:
 
-## Screenshots:
+### 1. **Homepage Overview**  
+This is where users land when they first visit the site. The homepage features a clean and modern layout, showcasing trending products.  
+![ethereal](screenshots/2.png)  
+_The homepage features featured products, categories, and easy navigation to key sections._
 
-![ethereal](screenshot/2.png)
-![ethereal](screenshot/3.png)
-![ethereal](screenshot/4.png)
-![ethereal](screenshot/5.png)
-![ethereal](screenshot/6.png)
-![ethereal](screenshot/7.png)
+### 2. **Product Catalog**  
+Users can browse through a variety of products, each with its image, price, and description. Filtering and sorting options make it easy to find the perfect item.  
+![ethereal](screenshots/3.png)  
+_The product catalog displays various items, along with options to filter and sort._
+
+### 3. **Product Details Page**  
+Clicking on a product gives users more details, including high-resolution images and a description of the product.  
+![ethereal](screenshots/4.png)  
+_The product detail page provides an in-depth view of the item with options to add to the cart._
+
+### 4. **Shopping Cart**  
+Once products are added, users can view their cart, adjust quantities, or remove items.  
+![ethereal](screenshots/5.png)  
+_The shopping cart allows users to review their selections before proceeding to checkout._
+
+### 5. **Checkout Process**  
+A smooth checkout flow powered by Stripe ensures users can securely complete their purchase.  
+![ethereal](screenshots/6.png)  
+_The checkout process is streamlined and easy to follow, making it simple for users to complete their purchase._
+
+### 6. **User Authentication**  
+The login and registration screens allow users to create accounts or log in to access a personalized shopping experience.  
+![ethereal](screenshots/7.png)  
+_Users can register or log in to access their account and view their order history._
+
+### 7. **Admin Panel**  
+Admin users can log in to manage products, categories, and track orders.  
+![ethereal](screenshots/8.png)  
+_The admin panel provides a powerful interface for managing products and monitoring orders._
+
+---
 
 ## Project Structure:
 
-```
-ethereal-apparel/
-├── client/                    # React frontend
-│   ├── public/                # Static files
-│   ├── src/                   # React source files
-│   │   ├── components/        # React components (UI elements, pages)
-│   │   ├── App.js             # Main app component
-│   │   └── index.js           # Entry point
-├── server/                    # Express backend
-│   ├── models/                # MongoDB models (User, Product, etc.)
-│   ├── server.js              # Express server setup
-├── .env                       # Environment variables
-├── package.json               # Backend dependencies
-├── client/package.json        # Frontend dependencies
-└── README.md                  # Project overview
+```bash
 
+├── README.md
+├── admin
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   ├── src
+│   ├── tailwind.config.js
+│   ├── vercel.json
+│   └── vite.config.js
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   ├── server.js
+│   └── vercel.json
+├── frontend
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   ├── src
+│   ├── tailwind.config.js
+│   ├── vercel.json
+│   └── vite.config.js
+└── screenshots
+    ├── 1.png
+    ├── 10.png
+    ├── 11.png
+    ├── 2.png
+    ├── 3.png
+    ├── 4.png
+    ├── 5.png
+    ├── 6.png
+    ├── 7.png
+    ├── 8.png
+    └── 9.png
 ```
 ## Contributing:
 
