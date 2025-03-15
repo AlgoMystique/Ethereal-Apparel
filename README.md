@@ -143,6 +143,14 @@ _The admin panel provides a powerful interface for managing products and monitor
 └── screenshots
  
 ```
+
+## Credits:
+
+- **Logo Design:** Crafted by the developer (UI/UX Designer).
+- 
+- **Images:** All product images were generated using **Aevoria AI**, a text-to-image SaaS app.  
+  [Explore Aevoria AI](#) (Launching soon for commercial use!)
+
 ## Contributing:
 
 -Fork the repository.
