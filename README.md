@@ -83,17 +83,66 @@ _The admin panel provides a powerful interface for managing products and monitor
 ## Project Structure:
 
 ```bash
-ethereal-apparel/
-├── client/                    # React frontend
-│   ├── public/                # Static files
-│   ├── src/                   # React source files
-│   │   ├── components/        # React components (UI elements, pages)
-│   │   ├── App.js             # Main app component
-│   │   └── index.js           # Entry point
-├── server/                    # Express backend
-│   ├── models/                # MongoDB models (User, Product, etc.)
-│   ├── server.js              # Express server setup
-├── .env                       # Environment variables
-├── package.json               # Backend dependencies
-├── client/package.json        # Frontend dependencies
-└── README.md                  # Project overview
+
+├── README.md
+├── admin
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   ├── src
+│   ├── tailwind.config.js
+│   ├── vercel.json
+│   └── vite.config.js
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   ├── server.js
+│   └── vercel.json
+├── frontend
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   ├── src
+│   ├── tailwind.config.js
+│   ├── vercel.json
+│   └── vite.config.js
+└── screenshots
+    ├── 1.png
+    ├── 10.png
+    ├── 11.png
+    ├── 2.png
+    ├── 3.png
+    ├── 4.png
+    ├── 5.png
+    ├── 6.png
+    ├── 7.png
+    ├── 8.png
+    └── 9.png
+```
+## Contributing:
+
+-Fork the repository.
+
+-Create a new branch (feature-branch-name).
+
+-Commit your changes.
+
+-Open a pull request.
+
+## License:
+
+This project is licensed under the MIT License.
