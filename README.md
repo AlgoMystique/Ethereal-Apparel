@@ -1,6 +1,6 @@
 # Ethereal - E-Commerce Website
 
-**Ethereal Apparel** is a modern and scalable e-commerce website built with the **MERN stack** (MongoDB, Express.js, React, and Node.js). This project is a full-stack single-page application (SPA) designed to deliver a seamless user experience with real-time data handling and smooth navigation.
+**Ethereal** is a modern and scalable e-commerce website built with the **MERN stack** (MongoDB, Express.js, React, and Node.js). This project is a full-stack single-page application (SPA) designed to deliver a seamless user experience with real-time data handling and smooth navigation.
 
 ![ethereal](screenshots/1.png)  
 _An overview of the Ethereal Apparel homepage_
