@@ -147,8 +147,8 @@ _The admin panel provides a powerful interface for managing products and monitor
 ## Credits:
 
 - **Logo Design:** Crafted by the developer (UI/UX Designer).
-- 
-- **Images:** All product images were generated using **Aevoria AI**, a text-to-image SaaS app.  
+  
+- **Images:** All product images were generated using **Aevoria AI**, a text-to-image SaaS app developed by SababaT. 
   [Explore Aevoria AI](#) (Launching soon for commercial use!)
 
 ## Contributing:
